@@ -255,6 +255,13 @@ nav ul li {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 37.5em) {
+  nav ul li {
+    margin-left: 1rem;
+    padding: 2rem;
+  }
+}
+
 nav ul li:hover {
   background-color: #EAE3D9;
 }
@@ -344,8 +351,8 @@ nav ul li.active {
 }
 
 .hero__left ul li a {
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
   font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
   color: #999999;
   font-style: normal;
@@ -517,6 +524,7 @@ nav ul li.active {
   color: #444148;
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 .designs__content-item h5 {

@@ -83,6 +83,11 @@ body {
                 transition:all .2s;
                 cursor:pointer;
 
+                @include respond(phone) {
+                   margin-left:1rem;
+                   padding:2rem;
+                }
+
                 &:hover {
                     background-color:#EAE3D9;
                 }
@@ -142,7 +147,7 @@ body {
             li {
                 margin-right:2rem;
                 a {
-                    @include fontNormal(1.4rem,1.8rem,#999999);
+                    @include fontNormal(1.6rem,2rem,#999999);
                 }
             }
         }
@@ -274,7 +279,8 @@ body {
                 }
             }
             h4 {
-                @include fontNormal(1.4rem,1.8rem,#444148);
+                @include fontNormal(1.4rem,1.8rem,#444148); 
+                 margin-bottom:1rem;
             }
 
             h5 {
