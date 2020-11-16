@@ -1,0 +1,489 @@
+body {
+    position:relative;
+    font-family:$baseFont;
+    font-weight:300;
+    line-height:1.6;
+} 
+
+* {
+    transition:all .2s;
+    scroll-behavior: smooth;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration:none;
+    font-family:$baseFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    &:hover {
+        text-decoration:none;
+    }
+
+}
+
+li {
+    list-style:none;
+}
+
+
+body {
+    display:flex;
+    flex-direction:column;
+}
+
+//Nav
+ nav {
+     display:flex;
+     justify-content: space-between;
+     padding:2rem 8rem;
+     padding-top:0;
+     padding-bottom:0;
+     background-color:$white;
+
+
+     h2 {
+        @include fontNormal(3.2rem,4.1rem,$black);
+        padding-top:2rem;
+        padding-bottom:2rem;
+     }
+
+     ul {
+        display:flex;
+        justify-content: space-between;
+
+        li {
+                background-color:$white;
+                margin-left:2rem;
+                padding:2.6rem;
+                transition:all .2s;
+                cursor:pointer;
+
+                &:hover {
+                    background-color:#EAE3D9;
+                }
+
+                &.active {
+                    background-color:#EAE3D9;
+                }
+        }
+     }
+ }
+
+//Nav
+
+//Conatiner
+.container {
+    display:flex;
+    flex-direction:column;
+    background-color:$white;
+}
+//Contianer
+
+// Hero
+.hero {
+    display:flex;
+    justify-content: space-between;
+    margin:0 8rem;
+    height: 64rem;
+    background-color: $grey;
+
+
+    &__left {
+        flex-basis:30%;
+        padding:4rem;
+        @include flexCenter;
+        flex-direction:column;
+        align-items:flex-start;
+
+        ul {
+            display:flex;
+            margin-bottom:2rem;
+
+            li {
+                margin-right:2rem;
+                a {
+                    @include fontNormal(1.4rem,1.8rem,#999999);
+                }
+            }
+        }
+
+        h2 {
+            @include fontBold(7.2rem,9.1rem,$black);
+        }
+    }
+
+    &__right {
+        flex-basis:88rem;
+        background-color: red;
+
+        figure {
+            width: 88rem;
+
+            img {
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+}   
+
+// Hero
+
+// Designs
+.designs {
+    margin:8rem;
+    margin-top:9rem;
+
+    h2 {
+        @include fontNormal(1.4rem,1.8rem,#999999);
+    }
+
+    h3 {
+        @include fontBold(7.2rem,9.1rem,$black);
+        width:60%;
+    }
+
+    &__content {
+        display:flex;
+        margin-top:3rem; 
+        margin-bottom:3rem;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        z-index: 0;
+        transition:all .2s;
+        scrollbar-width: 20px;
+
+        &::-webkit-scrollbar {
+          scrollbar-width: none;
+        }
+
+        &-item {
+            margin-right:3rem;
+            flex-basis:auto;
+
+            figure{
+                margin-bottom:2rem;
+
+                img {
+                    width:auto;
+                    height:auto;
+                }
+            }
+            h4 {
+                @include fontNormal(1.4rem,1.8rem,#444148);
+            }
+
+            h5 {
+                @include fontNormal(2rem,2.5rem,#444148);
+            }
+        }
+
+    }
+}
+// Designs
+
+// Shapes
+.shapes {
+    display:flex;
+    margin:8rem;
+    margin-top:10rem;
+
+    &__left {
+        flex-basis:60%;
+
+        h2 {
+            @include fontBold(7.2rem,9.1rem,$black);
+        }
+
+        p {
+            margin-top:2rem;
+            @include fontBold(1.6rem,2rem,#666666);
+        }
+    }
+
+    &__right {
+        flex-basis:40%;
+    }
+}
+// Shapes
+
+//Features
+.features {
+    margin:8rem;
+    @include flexCenter;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom:2rem;
+        @include fontBold(1.6rem,2rem,#444148);
+    }
+
+    &__selector {
+        display:flex;
+
+        button {
+            @include flexCenter;
+            padding:1.5rem;
+            margin-right:1.5rem;
+            outline:none;
+            border:none;
+            cursor:pointer;
+            width:11rem;
+            @include fontNormal(1.2rem,1.5rem,$black);
+
+            &:hover,
+            &.active {
+                color:$grey;
+                background-color: $black;
+            }
+        }
+    }
+
+    &__container {
+        display:flex;
+        width:100%;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        margin-top:4rem;
+
+        &-item {
+            flex-basis:29rem;
+            flex-basis:23%;
+            margin-bottom:5rem;
+            flex-grow:0;
+            border-bottom: 1px solid #EEEEEE;
+
+            figure {
+                width:29rem;
+                width:100%;
+                height:29rem;
+                margin-bottom: 2rem;
+
+                img {
+                    width:100%;
+                    height:100%;
+                }
+            }
+
+            h6 {
+                @include fontNormal(1.4rem,1.8rem,#444148);
+            }
+
+            .row {
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                margin-bottom: 2rem;
+
+                h5 {
+                    @include fontBold(2rem,2.5rem,#444148);
+                }
+
+                button {
+                    border:none;
+                    outline:none;
+                    border-radius:50%;
+                    @include flexCenter;
+                }
+            }
+        }
+    }
+}
+
+// /Features
+
+// Form
+.form {
+    margin:8rem;
+    display:flex;
+
+    &__left {
+        flex-basis:50%;
+        padding:3rem 0;
+        padding-right:3rem;
+
+
+        h2 {
+            @include fontBold(6.4rem,8.1rem,#444148);
+            margin-bottom:2rem;
+        }
+
+        p {
+            width:70%; 
+            @include fontBold(1.6rem,2.4rem,$black);
+        }
+
+        form.contactForm {
+            margin-top:3rem;
+
+            .form__group {
+                display:flex;
+                flex-direction:column;
+                
+                label {
+                    @include fontNormal(1.6rem,2rem,#999999);
+                }
+
+                input[type="text"],
+                input[type="number"] {
+                   margin-bottom: 1.5rem;
+                   border:none;
+                   outline:none;
+                   transition: all .2s;
+                   border-bottom:1px solid #999999;; 
+                   padding-top:1rem;
+                   padding-bottom:1rem;
+                   @include fontNormal(1.6rem,2.5rem, #999999);
+                   font-family:$baseFont;
+
+                   &:focus {
+                        border-bottom:1px solid $primary;
+
+                        &:invalid {
+                            border-bottom:1px solid orangered;
+                        }
+                    }
+
+                    &::-webkit-input-placeholder {
+                        @include fontNormal(1.6rem,2.5rem,#999999);
+                        font-family:$baseFont;
+                    }
+                }
+
+                .row {
+                    display:flex;
+                    justify-content: space-between;
+
+                    button {
+                        display:flex;
+                        justify-content: space-between;
+                        align-items:center;
+                        padding:1rem 2rem;
+                        @include fontNormal(1.6rem,2.5rem,$black);
+                        cursor:pointer;
+                        border:none;
+                        outline:none;
+                        background-color:transparent;
+
+                        span {
+                            margin-right:1rem;
+                        }
+
+                        &:hover {
+                            background-color:$light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__right {
+        flex-basis:40%;
+
+        figure {
+            width: 62rem;
+            height: 25.5rem;
+            margin-bottom:4rem;
+
+            img {
+                width:100%;
+                height:100%;
+            }
+        }
+
+        h2 {
+            margin-bottom:2rem;
+            @include fontBold(6.4rem,8.1rem,$black);
+        }
+
+        p {
+            margin-bottom:2rem;
+            @include fontNormal(1.6rem,2.4rem,$black);
+        }
+
+        .form {
+            display:flex;
+            justify-content: space-between;
+            margin:0;
+
+            input[type="email"] {
+                flex-basis:77%;
+                border:none;
+                outline:none;
+                transition: all .2s;
+                border-bottom:1px solid #999999; 
+                padding-top:1rem;
+                padding-bottom:1rem;
+                @include fontNormal(1.6rem,2.5rem, #999999);
+                font-family:$baseFont;
+
+                &:focus {
+                     border-bottom:1px solid $primary;
+
+                     &:invalid {
+                         border-bottom:1px solid orangered;
+                     }
+                 }
+
+                 &::-webkit-input-placeholder {
+                     @include fontNormal(1.6rem,2.5rem,#999999);
+                     font-family:$baseFont;
+                 }
+             }
+
+             button {
+                 flex-basis:auto;
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                padding:1rem 2rem;
+                @include fontNormal(1.6rem,2.5rem,$black);
+                cursor:pointer;
+                border:none;
+                outline:none;
+                border-bottom:1px solid #999999;
+                background-color:transparent;
+
+                span {
+                    margin-right:1rem;
+                }
+
+                &:hover {
+                    background-color:$light;
+                }
+            }
+        }
+    }
+}
+
+// Form
+
+
+//Gallery
+    .gallery {
+
+    }
+
+// Gallery
+
+//Footer
+.footer {
+    ul {
+        li {
+            a {
+
+            }
+        }
+    }
+}
+

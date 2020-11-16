@@ -1,0 +1,844 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url("../../fonts/EuclidCircularA-Medium.eot");
+  src: local("Euclid Circular A Medium"), local("EuclidCircularA-Medium"), url("../../fonts/EuclidCircularA-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/EuclidCircularA-Medium.woff2") format("woff2"), url("../../fonts/EucldCircularA-Medium.woff") format("woff"), url("../../fonts/EuclidCircularA-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url("../../fonts/EuclidCircularA-Bold.eot");
+  src: local("Euclid Circular A Bold"), local("EuclidCircularA-Bold"), url("../../fonts/EuclidCircularA-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/EuclidCircularA-Bold.woff2") format("woff2"), url("../../fonts/EuclidCircularA-Bold.woff") format("woff"), url("../../fonts/EuclidCircularA-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url("../../fonts/EuclidCircularA-Light.eot");
+  src: local("Euclid Circular A Light"), local("EuclidCircularA-Light"), url("../../fonts/EuclidCircularA-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/EuclidCircularA-Light.woff2") format("woff2"), url("../../fonts/EuclidCircularA-Light.woff") format("woff"), url("../../fonts/EuclidCircularA-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Euclid Circular A';
+  src: url("../../fonts/EuclidCircularA-Regular.eot");
+  src: local("Euclid Circular A Regular"), local("EuclidCircularA-Regular"), url("../../fonts/EuclidCircularA-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/EuclidCircularA-Regular.woff2") format("woff2"), url("../../fonts/EuclidCircularA-Regular.woff") format("woff"), url("../../fonts/EuclidCircularA-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 3.5rem;
+  line-height: 3rem;
+}
+
+.heading-2 {
+  line-height: 4.5rem;
+  font-size: 4rem;
+}
+
+.heading-3 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.heading-4 {
+  font-size: 2.1rem;
+}
+
+.ms {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-xl {
+  margin-bottom: 6rem;
+}
+
+body {
+  position: relative;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+* {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #ffffff;
+}
+
+nav h2 {
+  font-size: 3.2rem;
+  line-height: 4.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul li {
+  background-color: #ffffff;
+  margin-left: 2rem;
+  padding: 2.6rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: #EAE3D9;
+}
+
+nav ul li.active {
+  background-color: #EAE3D9;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 8rem;
+  height: 64rem;
+  background-color: #FAFAFA;
+}
+
+.hero__left {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.hero__left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.hero__left ul li {
+  margin-right: 2rem;
+}
+
+.hero__left ul li a {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.hero__left h2 {
+  font-size: 7.2rem;
+  line-height: 9.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.hero__right {
+  -ms-flex-preferred-size: 88rem;
+      flex-basis: 88rem;
+  background-color: red;
+}
+
+.hero__right figure {
+  width: 88rem;
+}
+
+.hero__right figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.designs {
+  margin: 8rem;
+  margin-top: 9rem;
+}
+
+.designs h2 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.designs h3 {
+  font-size: 7.2rem;
+  line-height: 9.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
+  width: 60%;
+}
+
+.designs__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  z-index: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  scrollbar-width: 20px;
+}
+
+.designs__content::-webkit-scrollbar {
+  scrollbar-width: none;
+}
+
+.designs__content-item {
+  margin-right: 3rem;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.designs__content-item figure {
+  margin-bottom: 2rem;
+}
+
+.designs__content-item figure img {
+  width: auto;
+  height: auto;
+}
+
+.designs__content-item h4 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.designs__content-item h5 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.shapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8rem;
+  margin-top: 10rem;
+}
+
+.shapes__left {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+.shapes__left h2 {
+  font-size: 7.2rem;
+  line-height: 9.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.shapes__left p {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #666666;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.shapes__right {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.features {
+  margin: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.features h1 {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.features__selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__selector button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+  margin-right: 1.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 11rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.features__selector button:hover, .features__selector button.active {
+  color: #FAFAFA;
+  background-color: #000000;
+}
+
+.features__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.features__container-item {
+  -ms-flex-preferred-size: 29rem;
+      flex-basis: 29rem;
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+  margin-bottom: 5rem;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.features__container-item figure {
+  width: 29rem;
+  width: 100%;
+  height: 29rem;
+  margin-bottom: 2rem;
+}
+
+.features__container-item figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.features__container-item h6 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.features__container-item .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.features__container-item .row h5 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.features__container-item .row button {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  margin: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__left {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 3rem 0;
+  padding-right: 3rem;
+}
+
+.form__left h2 {
+  font-size: 6.4rem;
+  line-height: 8.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.form__left p {
+  width: 70%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.form__left form.contactForm {
+  margin-top: 3rem;
+}
+
+.form__left form.contactForm .form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__left form.contactForm .form__group label {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.form__left form.contactForm .form__group input[type="text"],
+.form__left form.contactForm .form__group input[type="number"] {
+  margin-bottom: 1.5rem;
+  border: none;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-bottom: 1px solid #999999;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+}
+
+.form__left form.contactForm .form__group input[type="text"]:focus,
+.form__left form.contactForm .form__group input[type="number"]:focus {
+  border-bottom: 1px solid #927265;
+}
+
+.form__left form.contactForm .form__group input[type="text"]:focus:invalid,
+.form__left form.contactForm .form__group input[type="number"]:focus:invalid {
+  border-bottom: 1px solid orangered;
+}
+
+.form__left form.contactForm .form__group input[type="text"]::-webkit-input-placeholder,
+.form__left form.contactForm .form__group input[type="number"]::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+}
+
+.form__left form.contactForm .form__group .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form__left form.contactForm .form__group .row button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.form__left form.contactForm .form__group .row button span {
+  margin-right: 1rem;
+}
+
+.form__left form.contactForm .form__group .row button:hover {
+  background-color: #E8ECEB;
+}
+
+.form__right {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.form__right figure {
+  width: 62rem;
+  height: 25.5rem;
+  margin-bottom: 4rem;
+}
+
+.form__right figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.form__right h2 {
+  margin-bottom: 2rem;
+  font-size: 6.4rem;
+  line-height: 8.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.form__right p {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.form__right .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+.form__right .form input[type="email"] {
+  -ms-flex-preferred-size: 77%;
+      flex-basis: 77%;
+  border: none;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-bottom: 1px solid #999999;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+}
+
+.form__right .form input[type="email"]:focus {
+  border-bottom: 1px solid #927265;
+}
+
+.form__right .form input[type="email"]:focus:invalid {
+  border-bottom: 1px solid orangered;
+}
+
+.form__right .form input[type="email"]::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+}
+
+.form__right .form button {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #999999;
+  background-color: transparent;
+}
+
+.form__right .form button span {
+  margin-right: 1rem;
+}
+
+.form__right .form button:hover {
+  background-color: #E8ECEB;
+}
+/*# sourceMappingURL=main.css.map */
