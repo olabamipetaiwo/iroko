@@ -56,6 +56,22 @@ body {
         padding-bottom:2rem;
      }
 
+     figure {
+        margin-top:2rem;
+        padding-top:2rem;
+        padding-bottom:2rem;
+        @include flexCenter;
+        height:3rem;
+        width:10rem;
+
+        img {
+            width:100%;
+        }
+     }
+
+
+     
+
      ul {
         display:flex;
         justify-content: space-between;
@@ -96,6 +112,11 @@ body {
     height: 64rem;
     background-color: $grey;
 
+    @include respond(misc1) {
+        flex-wrap:wrap;
+        min-height:64rem;
+    }
+
 
     &__left {
         flex-basis:30%;
@@ -103,6 +124,16 @@ body {
         @include flexCenter;
         flex-direction:column;
         align-items:flex-start;
+
+        @include respond(tab-port) {
+            flex-basis:40%;
+        }
+
+        @include respond(misc1) {
+            flex-basis:100%;
+            padding:6rem;
+            margin-bottom:3rem;
+        }
 
         ul {
             display:flex;
@@ -122,15 +153,34 @@ body {
     }
 
     &__right {
-        flex-basis:88rem;
-        background-color: red;
+        flex-basis:70%;
+        height: 64rem;
+        background-color: $light;
+
+        @include respond(tab-port) {
+            flex-basis:60%;
+        }
+
+        @include respond(misc1) {
+            flex-basis:100%;
+            height:auto;
+        }
 
         figure {
-            width: 88rem;
+            width: 100%;
+            height: 64rem;
+
+            @include respond(misc1) {
+                height:auto;
+            }
 
             img {
                 width:100%;
                 height:100%;
+
+                @include respond(misc1) {
+                    height:auto;
+                }
             }
         }
     }
@@ -143,13 +193,53 @@ body {
     margin:8rem;
     margin-top:9rem;
 
+    @include respond(misc1) {
+        margin-top:25rem;
+    }
+
+    &::-webkit-scrollbar {
+        scrollbar-width: none;
+        display:none;
+      }
+
     h2 {
-        @include fontNormal(1.4rem,1.8rem,#999999);
+        @include fontNormal(1.6rem,2rem,#999999);
+        margin-bottom:2rem;
     }
 
     h3 {
         @include fontBold(7.2rem,9.1rem,$black);
         width:60%;
+
+        @include respond(misc1) {
+            width:80%;
+        }
+
+        @include respond(phone) {
+            width:100%;
+        }
+    }
+
+    &__indicator {
+       width:100%;
+       height:5px;
+       background-color:#DDDDDD;
+       border-radius:5px;
+       margin-top:5rem;
+       cursor:pointer;
+       overflow:hidden;
+
+    //    &:hover .designs__indicator__box {
+    //     width:70rem;
+    //    }
+
+       &__box {
+        background-color: #666666;
+        width:0rem;
+        height:5px;
+        border-radius:5px;
+        transition:all .2s;
+       }
     }
 
     &__content {
@@ -160,15 +250,20 @@ body {
         scrollbar-width: none;
         z-index: 0;
         transition:all .2s;
-        scrollbar-width: 20px;
+        scrollbar-width: none;
 
         &::-webkit-scrollbar {
           scrollbar-width: none;
+          display:none;
         }
 
         &-item {
             margin-right:3rem;
             flex-basis:auto;
+            
+            &::-webkit-scrollbar {
+                scrollbar-width: none;
+            }
 
             figure{
                 margin-bottom:2rem;
@@ -200,6 +295,14 @@ body {
     &__left {
         flex-basis:60%;
 
+        @include respond(misc1) {
+            flex-basis:70%;
+        }
+
+        @include respond(misc2) {
+            flex-basis:100%;
+        }
+
         h2 {
             @include fontBold(7.2rem,9.1rem,$black);
         }
@@ -212,6 +315,14 @@ body {
 
     &__right {
         flex-basis:40%;
+
+        @include respond(misc1) {
+            flex-basis:30%;
+        }
+
+        @include respond(misc2) {
+            display:none;
+        }
     }
 }
 // Shapes
@@ -254,6 +365,9 @@ body {
         justify-content:space-between;
         flex-wrap:wrap;
         margin-top:4rem;
+        overflow:hidden;
+
+
 
         &-item {
             flex-basis:29rem;
@@ -261,6 +375,14 @@ body {
             margin-bottom:5rem;
             flex-grow:0;
             border-bottom: 1px solid #EEEEEE;
+
+            @include respond(misc1) {
+                flex-basis:45%;
+            }
+
+            @include respond(phone) {
+                flex-basis:100%;
+            }
 
             figure {
                 width:29rem;
@@ -306,10 +428,19 @@ body {
     margin:8rem;
     display:flex;
 
+    @include respond(misc1) {
+        flex-wrap:wrap;
+    }
+
     &__left {
         flex-basis:50%;
         padding:3rem 0;
         padding-right:3rem;
+
+        @include respond(misc1) {
+            flex-basis:100%;
+            margin-bottom:5rem;
+        }
 
 
         h2 {
@@ -390,8 +521,14 @@ body {
     &__right {
         flex-basis:40%;
 
+
+        @include respond(misc1) {
+            flex-basis:100%;
+        }
+
         figure {
             width: 62rem;
+            width:100%;
             height: 25.5rem;
             margin-bottom:4rem;
 
@@ -471,6 +608,83 @@ body {
 
 //Gallery
     .gallery {
+        margin:10rem 8rem;
+        display:flex;
+        height: 64.3rem;
+
+        @include respond(misc1) {
+            flex-wrap:wrap;
+            height:auto;
+        }
+
+        &__left {
+            flex-basis:50%; 
+            flex-shrink:0;
+            flex-grow:0;
+            display:flex;
+            flex-direction:column;
+
+            @include respond(misc1) {
+                flex-basis:100%;
+            }
+
+            @include respond(phone) {
+                flex-wrap:wrap;
+            }
+
+            &__row {
+                width:100%;
+                display:flex;
+
+                @include respond(phone) { 
+                    flex-wrap:wrap;
+                }
+
+                figure {
+                    flex-basis:50%;
+                    flex-shrink:0;
+                    flex-grow:0;
+                    height:32.1rem;
+
+                    @include respond(phone) { 
+                        flex-basis:100%;
+                        height:auto;
+                    }
+                    
+
+                    img {
+                        height: 100%;
+                        width: 100%; 
+                    }
+                }
+            }
+        }
+
+        &__right {
+            flex-basis:64.3rem;
+            flex-basis:50%;
+            flex-shrink:0;
+            flex-grow:0;
+
+            @include respond(misc1) {
+                flex-basis:100%;
+            }
+
+            figure {
+                height: 64.2rem;
+                width: 64.2rem;
+                width:100%;
+
+                @include respond(phone) {
+                    height:auto;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%; 
+                }
+            }
+        }
 
     }
 
@@ -478,12 +692,43 @@ body {
 
 //Footer
 .footer {
-    ul {
-        li {
-            a {
+    background: #E8ECEB;
+    padding:4rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
 
+    ul {
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+
+        li {
+            @include fontBold(1.4rem,1.8rem,$black);
+            margin-right:4rem;
+
+            @include respond(phone) {
+               margin-right:2rem;
+            }
+
+            &.cr {
+                margin-right:8rem;
+                @include respond(phone) {
+                  margin-right:4rem;
+                }
+            }
+
+            a {
+                @include fontNormal(1.4rem,1.8rem,#666666);
             }
         }
     }
 }
 
+
+//MIsc
+#designs__content {
+    &::-webkit-scrollbar {
+        scrollbar-width: none;
+    }
+}
