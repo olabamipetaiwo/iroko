@@ -421,6 +421,10 @@ body {
                 height:29rem;
                 margin-bottom: 2rem;
 
+                @include respond(phone) {
+                    height:auto;
+                }
+
                 img {
                     width:100%;
                     height:100%;
