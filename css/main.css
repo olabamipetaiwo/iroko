@@ -744,14 +744,20 @@ nav ul li.active {
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .features__container-item figure {
+    height: auto;
+  }
+}
+
 .features__container-item figure img {
   width: 100%;
   height: 100%;
 }
 
 .features__container-item h6 {
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.2rem;
   font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
   color: #444148;
   font-style: normal;
