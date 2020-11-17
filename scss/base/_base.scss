@@ -49,6 +49,10 @@ body {
      padding-bottom:0;
      background-color:$white;
 
+     @include respond(phone) { 
+         padding:2rem 5rem;
+     }
+
 
      h2 {
         @include fontNormal(3.2rem,4.1rem,$black);
@@ -84,8 +88,10 @@ body {
                 cursor:pointer;
 
                 @include respond(phone) {
-                   margin-left:1rem;
+                   margin-left:.5rem;
                    padding:2rem;
+                   padding-right:1.5rem;
+                   padding-left:1.5rem;
                 }
 
                 &:hover {
@@ -119,7 +125,11 @@ body {
 
     @include respond(misc1) {
         flex-wrap:wrap;
-        min-height:64rem;
+        height:auto;
+    }
+
+    @include respond(phone) { 
+       margin:0 5rem;
     }
 
 
@@ -200,6 +210,11 @@ body {
 
     @include respond(misc1) {
         margin-top:25rem;
+    }
+
+    @include respond(phone) {
+        margin:5rem;
+        margin-top:15rem;
     }
 
     &::-webkit-scrollbar {
@@ -309,6 +324,11 @@ body {
             flex-basis:100%;
         }
 
+        @include respond(phone) { 
+            margin-left:5rem;
+            margin-right:5rem;
+         }
+
         h2 {
             @include fontBold(7.2rem,9.1rem,$black);
         }
@@ -338,6 +358,11 @@ body {
     margin:8rem;
     @include flexCenter;
     flex-direction: column;
+
+    @include respond(phone) { 
+        margin-left:5rem;
+        margin-right:5rem;
+     }
 
     h1 {
         margin-bottom:2rem;
@@ -433,10 +458,16 @@ body {
 .form {
     margin:8rem;
     display:flex;
+    
 
     @include respond(misc1) {
         flex-wrap:wrap;
     }
+
+    @include respond(phone) { 
+        margin-left:5rem;
+        margin-right:5rem;
+     }
 
     &__left {
         flex-basis:50%;
@@ -499,6 +530,7 @@ body {
                 .row {
                     display:flex;
                     justify-content: space-between;
+                    margin-top:1.5rem;
 
                     button {
                         display:flex;
@@ -570,6 +602,10 @@ body {
                 @include fontNormal(1.6rem,2.5rem, #999999);
                 font-family:$baseFont;
 
+                @include respond(phone) {
+                    flex-basis:70%;
+                }
+
                 &:focus {
                      border-bottom:1px solid $primary;
 
@@ -585,7 +621,7 @@ body {
              }
 
              button {
-                 flex-basis:auto;
+                flex-basis:auto;
                 display:flex;
                 justify-content: space-between;
                 align-items:center;
@@ -596,6 +632,10 @@ body {
                 outline:none;
                 border-bottom:1px solid #999999;
                 background-color:transparent;
+
+                @include respond(phone) {
+                    flex-basis:30%;
+                }
 
                 span {
                     margin-right:1rem;
@@ -617,6 +657,11 @@ body {
         margin:10rem 8rem;
         display:flex;
         height: 64.3rem;
+
+        @include respond(phone) { 
+            margin-left:5rem;
+            margin-right:5rem;
+         }
 
         @include respond(misc1) {
             flex-wrap:wrap;

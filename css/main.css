@@ -205,6 +205,12 @@ nav {
   background-color: #ffffff;
 }
 
+@media only screen and (max-width: 37.5em) {
+  nav {
+    padding: 2rem 5rem;
+  }
+}
+
 nav h2 {
   font-size: 3.2rem;
   line-height: 4.1rem;
@@ -257,8 +263,10 @@ nav ul li {
 
 @media only screen and (max-width: 37.5em) {
   nav ul li {
-    margin-left: 1rem;
+    margin-left: .5rem;
     padding: 2rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -297,7 +305,13 @@ nav ul li.active {
   .hero {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    min-height: 64rem;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .hero {
+    margin: 0 5rem;
   }
 }
 
@@ -420,6 +434,13 @@ nav ul li.active {
 @media only screen and (max-width: 50em) {
   .designs {
     margin-top: 25rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .designs {
+    margin: 5rem;
+    margin-top: 15rem;
   }
 }
 
@@ -563,6 +584,13 @@ nav ul li.active {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .shapes__left {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
 .shapes__left h2 {
   font-size: 7.2rem;
   line-height: 9.1rem;
@@ -615,6 +643,13 @@ nav ul li.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .features {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 
 .features h1 {
@@ -774,6 +809,13 @@ nav ul li.active {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .form {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
 .form__left {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -879,6 +921,7 @@ nav ul li.active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 1.5rem;
 }
 
 .form__left form.contactForm .form__group .row button {
@@ -985,6 +1028,13 @@ nav ul li.active {
   font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .form__right .form input[type="email"] {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+}
+
 .form__right .form input[type="email"]:focus {
   border-bottom: 1px solid #927265;
 }
@@ -1029,6 +1079,13 @@ nav ul li.active {
   background-color: transparent;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .form__right .form button {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
+
 .form__right .form button span {
   margin-right: 1rem;
 }
@@ -1043,6 +1100,13 @@ nav ul li.active {
   display: -ms-flexbox;
   display: flex;
   height: 64.3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .gallery {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
 
 @media only screen and (max-width: 50em) {
