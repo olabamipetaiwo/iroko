@@ -15,31 +15,69 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <section class="modal">
+      <button class="controls previous">
+         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.918 12.2759H5.91797" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.918 19.2759L5.91797 12.2759L12.918 5.27588" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>                  
+      </button>
+      <button class="controls next">
+         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.43652 12.2759H19.4365" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.4365 5.27588L19.4365 12.2759L12.4365 19.2759" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>                  
+      </button>
+      <div class="modal__content">
+         <div class="modal__content__header">
+               <div class="col">
+                  <h3>Category Name</h3>
+                  <h2>Kitchen Cabinet<h2>
+               </div>
+               <button class="closeModal">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M17.9995 6.77588L5.99951 18.7759" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M5.99951 6.77588L17.9995 18.7759" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                     
+               </button>
+         </div>
+         <div class="modal__content__body">
+            
+            <figure>
+                  <img class="modalMainImg" src="" />
+            </figure>
+            
+         </div>
+         <div class="modal__content__footer" id="imgList">
+               <!-- <img class="active" src="./img/small (1).png" />
+               <img src="./img/small (2).png" />  -->
+         </div>
+      </div>
+   </section>
+   <!-- Modal -->
    <nav>
          <figure> 
+            <a href="./index.html">
                <img src="./img/logo.png" alt="logo" />
+            </a>
          </figure>
          <ul>
-            <li class="active"><a href="#">
+            <li>
+              <a href="./index.html">
                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8.15722 19.7714V16.7047C8.1572 15.9246 8.79312 15.2908 9.58101 15.2856H12.4671C13.2587 15.2856 13.9005 15.9209 13.9005 16.7047V16.7047V19.7809C13.9003 20.4432 14.4343 20.9845 15.103 21H17.0271C18.9451 21 20.5 19.4607 20.5 17.5618V17.5618V8.83784C20.4898 8.09083 20.1355 7.38935 19.538 6.93303L12.9577 1.6853C11.8049 0.771566 10.1662 0.771566 9.01342 1.6853L2.46203 6.94256C1.86226 7.39702 1.50739 8.09967 1.5 8.84736V17.5618C1.5 19.4607 3.05488 21 4.97291 21H6.89696C7.58235 21 8.13797 20.4499 8.13797 19.7714V19.7714" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                </svg>                  
             </a></li>
-            <li><a href>
+            <li>
+             <a class="active" href="./product.html">
                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="9.76663" cy="9.7666" r="8.98856" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M16.0183 16.4851L19.5423 20" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>                                                 
             </a></li>
-            <!-- <li><a href="#">
-               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.2678 7.06113L12.0024 10.4954C11.1952 11.1283 10.0636 11.1283 9.25641 10.4954L4.95435 7.06113" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.88787 1.5H15.3158C16.6752 1.51525 17.969 2.08993 18.896 3.0902C19.823 4.09048 20.3022 5.42903 20.222 6.79412V13.322C20.3022 14.6871 19.823 16.0256 18.896 17.0259C17.969 18.0262 16.6752 18.6009 15.3158 18.6161H5.88787C2.96796 18.6161 1 16.2407 1 13.322V6.79412C1 3.87545 2.96796 1.5 5.88787 1.5Z" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-               </svg>
-                                                 
-            </a></li> -->
-            <li class="quotelink">
-               <a href="#form">
+            <li>
+               <a class="quotelink" href="#form">
                   Request a quote
                </a>
             </li>
@@ -431,7 +469,7 @@
 
       <section class="gallery">
             <div class="gallery__left">
-               <div class="gallery__left__row">
+               <div class="gallery__left__row gallery__item">
                   <figure>
                      <img src="./img/gallery (1).png" alt="gal1">
                   </figure>
@@ -439,7 +477,7 @@
                      <img src="./img/gallery (2).png" alt="gal2">
                   </figure>
                </div>
-               <div class="gallery__left__row">
+               <div class="gallery__left__row gallery__item">
                   <figure>
                      <img src="./img/gallery (3).png" alt="gal3">
                   </figure>
@@ -449,7 +487,7 @@
                </div>
 
             </div>
-            <div class="gallery__right">
+            <div class="gallery__right gallery__item">
                   <figure>
                      <img src="./img/gallery5.png" alt="gal5">
                   </figure>
