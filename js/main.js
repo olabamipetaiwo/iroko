@@ -7,13 +7,15 @@ $(document).ready(function() {
         progressBarBox.style.width = designContainer.scrollLeft + 800 + 'px';
     });
 
+    // Gallery
+
+
+    //Gallery
 
 
     var $container = $('.features__container');
     var cards = Array.from(document.querySelectorAll('.features__container-item'));
 
-    
-  
 
     $('.features__selector button').click(function(){
       $('.features__selector button.active').removeClass('active');

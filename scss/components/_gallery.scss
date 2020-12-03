@@ -1,0 +1,89 @@
+
+//Gallery
+.gallery {
+    margin:10rem 8rem;
+    display:flex;
+    height: 64.3rem;
+
+    @include respond(phone) { 
+        margin-left:5rem;
+        margin-right:5rem;
+     }
+
+    @include respond(misc1) {
+        flex-wrap:wrap;
+        height:auto;
+    }
+
+    &__left {
+        flex-basis:50%; 
+        flex-shrink:0;
+        flex-grow:0;
+        display:flex;
+        flex-direction:column;
+
+        @include respond(misc1) {
+            flex-basis:100%;
+        }
+
+        @include respond(phone) {
+            flex-wrap:wrap;
+        }
+
+        &__row {
+            width:100%;
+            display:flex;
+
+            @include respond(phone) { 
+                flex-wrap:wrap;
+            }
+
+            figure {
+                flex-basis:50%;
+                flex-shrink:0;
+                flex-grow:0;
+                height:32.1rem;
+
+                @include respond(phone) { 
+                    flex-basis:100%;
+                    height:auto;
+                }
+                
+
+                img {
+                    height: 100%;
+                    width: 100%; 
+                }
+            }
+        }
+    }
+
+    &__right {
+        flex-basis:64.3rem;
+        flex-basis:50%;
+        flex-shrink:0;
+        flex-grow:0;
+
+        @include respond(misc1) {
+            flex-basis:100%;
+        }
+
+        figure {
+            height: 64.2rem;
+            width: 64.2rem;
+            width:100%;
+
+            @include respond(phone) {
+                height:auto;
+            }
+
+            img {
+                height: 100%;
+                width: 100%; 
+            }
+        }
+    }
+
+}
+
+// Gallery

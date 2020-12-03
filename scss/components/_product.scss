@@ -1,0 +1,60 @@
+.product {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    figure {
+        width:100%;
+        margin-bottom: 2rem;
+
+        img {
+            width:100%;
+            height:100%;
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+
+        &__box {
+            height: 5.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include respond(phone) {
+               height:5rem;
+             }
+
+            h4 {
+                @include fontNormal(1.4rem,1.8rem,#444148);
+            }
+
+            h5 {
+                @include fontBold(2rem,2.5rem,#444148);
+            }
+        }
+
+        button {
+            width: 5.8rem;
+            height: 5.8rem;
+            background: #444148;
+            border-radius:50%;
+            border:none;
+            outline:none;
+            cursor:pointer;
+            @include flexCenter;
+
+            @include respond(phone) {
+               display:none;
+            }
+
+            svg {
+                path {
+                    // fill:#FFFFFF;
+                }
+            }
+        }
+    }
+}

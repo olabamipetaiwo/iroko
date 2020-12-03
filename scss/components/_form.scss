@@ -1,0 +1,197 @@
+
+// Form
+.form {
+    margin:8rem;
+    display:flex;
+    
+
+    @include respond(misc1) {
+        flex-wrap:wrap;
+    }
+
+    @include respond(phone) { 
+        margin-left:5rem;
+        margin-right:5rem;
+     }
+
+    &__left {
+        flex-basis:50%;
+        padding:3rem 0;
+        padding-right:3rem;
+
+        @include respond(misc1) {
+            flex-basis:100%;
+            margin-bottom:5rem;
+        }
+
+
+        h2 {
+            @include fontBold(6.4rem,8.1rem,#444148);
+            margin-bottom:2rem;
+        }
+
+        p {
+            width:70%; 
+            @include fontBold(1.6rem,2.4rem,$black);
+        }
+
+        form.contactForm {
+            margin-top:3rem;
+
+            .form__group {
+                display:flex;
+                flex-direction:column;
+                
+                label {
+                    @include fontNormal(1.6rem,2rem,#999999);
+                }
+
+                input[type="text"],
+                input[type="number"] {
+                   margin-bottom: 1.5rem;
+                   border:none;
+                   outline:none;
+                   transition: all .2s;
+                   border-bottom:1px solid #999999;; 
+                   padding-top:1rem;
+                   padding-bottom:1rem;
+                   @include fontNormal(1.6rem,2.5rem, #999999);
+                   font-family:$baseFont;
+
+                   &:focus {
+                        border-bottom:1px solid $primary;
+
+                        &:invalid {
+                            border-bottom:1px solid orangered;
+                        }
+                    }
+
+                    &::-webkit-input-placeholder {
+                        @include fontNormal(1.6rem,2.5rem,#999999);
+                        font-family:$baseFont;
+                    }
+                }
+
+                .row {
+                    display:flex;
+                    justify-content: space-between;
+                    margin-top:1.5rem;
+
+                    button {
+                        display:flex;
+                        justify-content: space-between;
+                        align-items:center;
+                        padding:1rem 2rem;
+                        @include fontNormal(1.6rem,2.5rem,$black);
+                        cursor:pointer;
+                        border:none;
+                        outline:none;
+                        background-color:transparent;
+
+                        span {
+                            margin-right:1rem;
+                        }
+
+                        &:hover {
+                            background-color:$light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__right {
+        flex-basis:40%;
+
+
+        @include respond(misc1) {
+            flex-basis:100%;
+        }
+
+        figure {
+            width: 62rem;
+            width:100%;
+            height: 25.5rem;
+            margin-bottom:4rem;
+
+            img {
+                width:100%;
+                height:100%;
+            }
+        }
+
+        h2 {
+            margin-bottom:2rem;
+            @include fontBold(6.4rem,8.1rem,$black);
+        }
+
+        p {
+            margin-bottom:2rem;
+            @include fontNormal(1.6rem,2.4rem,$black);
+        }
+
+        .form {
+            display:flex;
+            justify-content: space-between;
+            margin:0;
+
+            input[type="email"] {
+                flex-basis:77%;
+                border:none;
+                outline:none;
+                transition: all .2s;
+                border-bottom:1px solid #999999; 
+                padding-top:1rem;
+                padding-bottom:1rem;
+                @include fontNormal(1.6rem,2.5rem, #999999);
+                font-family:$baseFont;
+
+                @include respond(phone) {
+                    flex-basis:70%;
+                }
+
+                &:focus {
+                     border-bottom:1px solid $primary;
+
+                     &:invalid {
+                         border-bottom:1px solid orangered;
+                     }
+                 }
+
+                 &::-webkit-input-placeholder {
+                     @include fontNormal(1.6rem,2.5rem,#999999);
+                     font-family:$baseFont;
+                 }
+             }
+
+             button {
+                flex-basis:auto;
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                padding:1rem 2rem;
+                @include fontNormal(1.6rem,2.5rem,$black);
+                cursor:pointer;
+                border:none;
+                outline:none;
+                border-bottom:1px solid #999999;
+                background-color:transparent;
+
+                @include respond(phone) {
+                    flex-basis:30%;
+                }
+
+                span {
+                    margin-right:1rem;
+                }
+
+                &:hover {
+                    background-color:$light;
+                }
+            }
+        }
+    }
+}
+
+// Form

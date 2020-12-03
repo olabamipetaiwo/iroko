@@ -1,0 +1,148 @@
+// Header
+.header {
+    display:flex;
+    justify-content: space-between;
+    height: 69rem;
+    background-color: $grey;
+
+    @include respond(tab-port) {
+        flex-wrap:wrap;
+        height:auto;
+    }
+
+
+    &__details {
+        flex-basis: auto;
+        flex-grow:1;
+        flex-shrink:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        padding:8rem;
+
+        h2 {
+            @include fontBold(7.2rem,9.1rem,#444148);
+        }
+
+        p {
+            margin-bottom:2rem;
+            @include fontNormal(2rem,2.5rem,#927265);
+        }
+
+        a {
+            padding:2rem;
+            background: #444148;
+            color:$white;
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            width:20rem;
+            cursor:pointer;
+
+            &:hover {
+                background: rgba(#444148,0.7);
+                color:$white;
+            }
+        }
+    }
+
+    &__image {
+        flex-grow:1;
+        flex-shrink:1;
+
+        h2 {
+            @include fontBold(2rem,2.5rem,#000000);
+        }
+
+        &.first {
+            flex-basis: 47.6rem;
+            flex-basis:33%;
+            position: relative;
+
+            @include respond(phone) {
+                flex-basis:100%;
+            }
+
+            figure {
+                height:100%;   
+                position: relative;
+                z-index:2;
+
+                @include respond(phone) {
+                    height:40rem;
+                }
+
+                img{
+                    height:100%;
+                }
+            }
+
+            .basic {
+                padding:3rem 4rem;
+                background-color: #c4c4c4;
+                position: absolute;
+                z-index:3;
+                width:100%;
+                bottom:0;
+                left:0;
+
+                @include respond(phone) {
+                   position: relative;
+                   top:0
+                }
+
+                h6 {
+                    @include fontNormal(1.4rem,1.8rem,$black);
+                }
+
+                h2 {
+                    color:$black;
+                }
+            }
+        }
+
+        &.second {
+            flex-basis: 36.8rem;
+            flex-basis:25.6%;
+
+            @include respond(phone) {
+                flex-basis:100%;
+            }
+
+            figure {
+                height: 61.4rem;
+
+                @include respond(phone) {
+                    height:40rem;
+                }
+
+                img{
+                    height:100%;
+                }
+            }
+
+            h2 {
+                color:$white;
+            }
+
+            .row {
+                display:flex;
+                justify-content:space-between;
+                // height:100%;
+                width:100%;
+                padding:2.8rem 2rem;
+                background: #444148;
+            }
+        }
+
+        figure{
+            width:100%;
+            img {
+                width:100%;
+            }
+        }
+    }
+}   
+
+// Headr

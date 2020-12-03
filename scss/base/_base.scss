@@ -83,15 +83,36 @@ body {
         li {
                 background-color:$white;
                 margin-left:2rem;
-                padding:2.6rem;
+                padding:2.5rem;
                 transition:all .2s;
                 cursor:pointer;
+                @include flexCenter;
+
+                &.quotelink {
+                    background-color: #444148;
+
+                    a {
+                        color:$white;
+                        @include fontBold(1.4rem,1.8rem,$white); 
+                    }
+
+                    &:hover,
+                    &:hover a {
+                        color: #444148;
+                        background-color:#EAE3D9;
+                    }
+                }
 
                 @include respond(phone) {
                    margin-left:.5rem;
                    padding:2rem;
                    padding-right:1.5rem;
                    padding-left:1.5rem;
+
+                   svg {
+                       width:1.8rem;
+                       height:1.8rem;
+                   }
                 }
 
                 &:hover {
@@ -202,6 +223,76 @@ body {
 }   
 
 // Hero
+
+//Category
+.category {
+    padding:10rem 8rem;
+    background: #FAFAFA;
+
+    h2 {
+        @include fontBold(7.2rem,9.1rem,$black);
+        margin-bottom:5rem;
+        width:60%;
+    
+        @include respond(misc1) {
+            width:80%;
+        }
+    
+        @include respond(phone) {
+            width:100%;
+        }
+    }
+
+    &__container {
+        display:flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        width:100%;
+
+        &__item {
+            flex-basis: 48%;
+            flex-grow:0;
+            flex-shrink:0;
+
+            &.left {
+                padding-top: 5rem;
+
+                @include respond(phone) {
+                    padding-top:0;
+                 }
+            }
+        }
+    }
+
+    &__cta {
+        display:flex;
+        align-items:center;
+        justify-content: flex-start;
+        margin-top:2rem;
+
+        @include respond(phone) {
+            justify-content: flex-end;
+        }
+
+        a {
+            padding:2rem;
+            background: #444148;
+            color:$white;
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            width:20rem;
+            cursor:pointer;
+
+            &:hover {
+                background: rgba(#444148,0.7);
+                color:$white;
+            }
+        }
+    }
+}
+
+//Category
 
 // Designs
 .designs {
@@ -458,292 +549,7 @@ body {
 
 // /Features
 
-// Form
-.form {
-    margin:8rem;
-    display:flex;
-    
 
-    @include respond(misc1) {
-        flex-wrap:wrap;
-    }
-
-    @include respond(phone) { 
-        margin-left:5rem;
-        margin-right:5rem;
-     }
-
-    &__left {
-        flex-basis:50%;
-        padding:3rem 0;
-        padding-right:3rem;
-
-        @include respond(misc1) {
-            flex-basis:100%;
-            margin-bottom:5rem;
-        }
-
-
-        h2 {
-            @include fontBold(6.4rem,8.1rem,#444148);
-            margin-bottom:2rem;
-        }
-
-        p {
-            width:70%; 
-            @include fontBold(1.6rem,2.4rem,$black);
-        }
-
-        form.contactForm {
-            margin-top:3rem;
-
-            .form__group {
-                display:flex;
-                flex-direction:column;
-                
-                label {
-                    @include fontNormal(1.6rem,2rem,#999999);
-                }
-
-                input[type="text"],
-                input[type="number"] {
-                   margin-bottom: 1.5rem;
-                   border:none;
-                   outline:none;
-                   transition: all .2s;
-                   border-bottom:1px solid #999999;; 
-                   padding-top:1rem;
-                   padding-bottom:1rem;
-                   @include fontNormal(1.6rem,2.5rem, #999999);
-                   font-family:$baseFont;
-
-                   &:focus {
-                        border-bottom:1px solid $primary;
-
-                        &:invalid {
-                            border-bottom:1px solid orangered;
-                        }
-                    }
-
-                    &::-webkit-input-placeholder {
-                        @include fontNormal(1.6rem,2.5rem,#999999);
-                        font-family:$baseFont;
-                    }
-                }
-
-                .row {
-                    display:flex;
-                    justify-content: space-between;
-                    margin-top:1.5rem;
-
-                    button {
-                        display:flex;
-                        justify-content: space-between;
-                        align-items:center;
-                        padding:1rem 2rem;
-                        @include fontNormal(1.6rem,2.5rem,$black);
-                        cursor:pointer;
-                        border:none;
-                        outline:none;
-                        background-color:transparent;
-
-                        span {
-                            margin-right:1rem;
-                        }
-
-                        &:hover {
-                            background-color:$light;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &__right {
-        flex-basis:40%;
-
-
-        @include respond(misc1) {
-            flex-basis:100%;
-        }
-
-        figure {
-            width: 62rem;
-            width:100%;
-            height: 25.5rem;
-            margin-bottom:4rem;
-
-            img {
-                width:100%;
-                height:100%;
-            }
-        }
-
-        h2 {
-            margin-bottom:2rem;
-            @include fontBold(6.4rem,8.1rem,$black);
-        }
-
-        p {
-            margin-bottom:2rem;
-            @include fontNormal(1.6rem,2.4rem,$black);
-        }
-
-        .form {
-            display:flex;
-            justify-content: space-between;
-            margin:0;
-
-            input[type="email"] {
-                flex-basis:77%;
-                border:none;
-                outline:none;
-                transition: all .2s;
-                border-bottom:1px solid #999999; 
-                padding-top:1rem;
-                padding-bottom:1rem;
-                @include fontNormal(1.6rem,2.5rem, #999999);
-                font-family:$baseFont;
-
-                @include respond(phone) {
-                    flex-basis:70%;
-                }
-
-                &:focus {
-                     border-bottom:1px solid $primary;
-
-                     &:invalid {
-                         border-bottom:1px solid orangered;
-                     }
-                 }
-
-                 &::-webkit-input-placeholder {
-                     @include fontNormal(1.6rem,2.5rem,#999999);
-                     font-family:$baseFont;
-                 }
-             }
-
-             button {
-                flex-basis:auto;
-                display:flex;
-                justify-content: space-between;
-                align-items:center;
-                padding:1rem 2rem;
-                @include fontNormal(1.6rem,2.5rem,$black);
-                cursor:pointer;
-                border:none;
-                outline:none;
-                border-bottom:1px solid #999999;
-                background-color:transparent;
-
-                @include respond(phone) {
-                    flex-basis:30%;
-                }
-
-                span {
-                    margin-right:1rem;
-                }
-
-                &:hover {
-                    background-color:$light;
-                }
-            }
-        }
-    }
-}
-
-// Form
-
-
-//Gallery
-    .gallery {
-        margin:10rem 8rem;
-        display:flex;
-        height: 64.3rem;
-
-        @include respond(phone) { 
-            margin-left:5rem;
-            margin-right:5rem;
-         }
-
-        @include respond(misc1) {
-            flex-wrap:wrap;
-            height:auto;
-        }
-
-        &__left {
-            flex-basis:50%; 
-            flex-shrink:0;
-            flex-grow:0;
-            display:flex;
-            flex-direction:column;
-
-            @include respond(misc1) {
-                flex-basis:100%;
-            }
-
-            @include respond(phone) {
-                flex-wrap:wrap;
-            }
-
-            &__row {
-                width:100%;
-                display:flex;
-
-                @include respond(phone) { 
-                    flex-wrap:wrap;
-                }
-
-                figure {
-                    flex-basis:50%;
-                    flex-shrink:0;
-                    flex-grow:0;
-                    height:32.1rem;
-
-                    @include respond(phone) { 
-                        flex-basis:100%;
-                        height:auto;
-                    }
-                    
-
-                    img {
-                        height: 100%;
-                        width: 100%; 
-                    }
-                }
-            }
-        }
-
-        &__right {
-            flex-basis:64.3rem;
-            flex-basis:50%;
-            flex-shrink:0;
-            flex-grow:0;
-
-            @include respond(misc1) {
-                flex-basis:100%;
-            }
-
-            figure {
-                height: 64.2rem;
-                width: 64.2rem;
-                width:100%;
-
-                @include respond(phone) {
-                    height:auto;
-                }
-
-                img {
-                    height: 100%;
-                    width: 100%; 
-                }
-            }
-        }
-
-    }
-
-// Gallery
 
 //Footer
 .footer {
