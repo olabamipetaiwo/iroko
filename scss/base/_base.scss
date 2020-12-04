@@ -81,9 +81,19 @@ body {
         justify-content: space-between;
 
         li {
+            background-color:$white;
+
+            &.quotelink {
+                background-color: #444148;
+
+                &:hover {
+                    background-color:#EAE3D9;
+                }
+            }
+
             a {
                 background-color:$white;
-                margin-left:2rem;
+                // margin-left:2rem;
                 padding:2.5rem;
                 transition:all .2s;
                 cursor:pointer;

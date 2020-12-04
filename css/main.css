@@ -227,9 +227,20 @@ nav ul {
   justify-content: space-between;
 }
 
+nav ul li {
+  background-color: #ffffff;
+}
+
+nav ul li.quotelink {
+  background-color: #444148;
+}
+
+nav ul li.quotelink:hover {
+  background-color: #EAE3D9;
+}
+
 nav ul li a {
   background-color: #ffffff;
-  margin-left: 2rem;
   padding: 2.5rem;
   transition: all .2s;
   cursor: pointer;
@@ -1097,8 +1108,23 @@ nav ul li a.quotelink:hover {
   }
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h2 {
+  font-size: 6.4rem;
+  line-height: 8.1rem;
+  font-family: "Euclid Circular A", Arial, Helvetica, sans-serif;
+  color: #444148;
+  font-style: normal;
+  font-weight: bold;
+}
+
 .gallery {
-  margin: 10rem 8rem;
+  margin: 8rem;
   display: flex;
   height: 64.3rem;
 }

@@ -1,12 +1,4 @@
 $(document).ready(function() {
-    var designContainer = document.querySelector('.designs__content');
-    const progressBarBox = document.querySelector(".designs__indicator__box");
-    progressBarBox.style.width = '800px';
-
-    designContainer.addEventListener('scroll',function() {
-        progressBarBox.style.width = designContainer.scrollLeft + 800 + 'px';
-    });
-
     // Gallery/modal
     $('.closeModal').on('click',function() {
          $('.modal').removeClass('show');

@@ -1,7 +1,13 @@
+.heading {
+    @include flexCenter;
 
+    h2 {
+        @include fontBold(6.4rem,8.1rem,#444148);
+    }
+}
 //Gallery
 .gallery {
-    margin:10rem 8rem;
+    margin:8rem;
     display:flex;
     height: 64.3rem;
 
