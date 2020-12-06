@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    //Nav
+    $('.search').on('click',function() {
+        $('.searchNav').toggleClass('show');
+    });
+
     // Gallery/modal
     $('.closeModal').on('click',function() {
          $('.modal').removeClass('show');

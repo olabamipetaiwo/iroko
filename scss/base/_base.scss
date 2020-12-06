@@ -83,6 +83,44 @@ body {
         li {
             background-color:$white;
 
+            &.searchNav {
+                display: flex;
+                align-items: center;
+                max-width:0;
+                transition: all .2s;
+
+                &.show {
+                    max-width:100%;
+                    margin-left:1rem;
+                    margin-right:1rem;
+                }
+
+                input[type="text"] {
+                    border:none;
+                    outline:none;
+                    transition: all .2s;
+                    border-bottom:1px solid #999999;; 
+                    padding-top:1rem;
+                    @include fontNormal(1.6rem,2.5rem, #999999);
+                    font-family:$baseFont;
+     
+                    &:focus {
+                         border-bottom:1px solid $primary;
+     
+                         &:invalid {
+                             border-bottom:1px solid orangered;
+                         }
+                     }
+     
+                     &::-webkit-input-placeholder {
+                         @include fontNormal(1.6rem,2.5rem,#999999);
+                         font-family:$baseFont;
+                     }
+                 }
+            }
+
+            
+
             &.quotelink {
                 background-color: #444148;
 
@@ -531,6 +569,10 @@ body {
 
             h6 {
                 @include fontNormal(1.6rem,2rem,#444148);
+
+                &:hover {
+                    color:#927265;
+                }
             }
 
             .row {
@@ -541,6 +583,10 @@ body {
 
                 h5 {
                     @include fontBold(2rem,2.5rem,#444148);
+
+                    &:hover {
+                        color:#927265;
+                    }
                 }
 
                 button {
@@ -548,6 +594,17 @@ body {
                     outline:none;
                     border-radius:50%;
                     @include flexCenter;
+                    transition:all .2s;
+                    cursor: pointer;
+
+                    &:hover svg{
+                        fill:transparent;
+
+                        path {
+                            fill:transparent;
+                            stroke:#927265;
+                        }
+                    }
                 }
             }
         }
